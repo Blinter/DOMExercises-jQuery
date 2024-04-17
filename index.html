@@ -101,9 +101,7 @@ $(window).on("load", function() {
   //    the background color of the body should change to match whatever
   //    the three values in the inputs are.
   //INPUT FORMS ARE RBG NOT RGB
-  $("input").on("keyup",()=>$('body').css("background-color",`rgb(${[...$(".form-control").map(function(){
-    return $(this).val()})].map((v,i,a)=>i===1?a[2]:i===2?a[1]:v).join(',')})`));
-  $("input").on("change",()=>$('body').css("background-color",`rgb(${[...$(".form-control").map(function(){
+  $("input").on("keyup keypress blur change",()=>$('body').css("background-color",`rgb(${[...$(".form-control").map(function(){
     return $(this).val()})].map((v,i,a)=>i===1?a[2]:i===2?a[1]:v).join(',')})`));
 
   // 8. Add an event listener so that when you click on the image,
