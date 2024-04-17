@@ -85,7 +85,7 @@ $(window).on("load", function() {
   //$("input").on("change",()=>$('body').css("background-color",`rgb(${[...$(".form-control").map(function(){
   //  return $(this).val()})].join(' ')})`));
   //});  //INPUT FORMS ARE RBG
-  $("input").on("change",()=>$('body').css("background-color",`rgb(${[...$(".form-control").map(function(){
+  $("input").on("keyup",()=>$('body').css("background-color",`rgb(${[...$(".form-control").map(function(){
     return $(this).val()})].map((v,i,a)=>i===1?a[2]:i===2?a[1]:v).join(' ')})`));
   $("img").on("click", function(){$(this).remove();});
   });  
