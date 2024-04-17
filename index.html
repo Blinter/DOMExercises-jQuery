@@ -89,12 +89,12 @@ $(window).on("load", function() {
   $("h1").css({"font-size": Math.floor(Math.random() * 100) + "px"});
 
   // 5. Add an item to the list; it can say whatever you want.
-  $("ol").$("<li>").text("Anything you want Text.");
+  $("<li>").text("Anything you want Text.").appendTo($("ol"));
 
   // 6. Scratch that; the list is silly. Empty the aside and put a paragraph
   //    in it apologizing for the list's existence.
-  //$("li").remove();
-  //$("ol").text("Sorry for the link's existence");
+  // $("li").remove();
+  // $("ol").text("Sorry for the link's existence");
   $("aside").empty().text("Sorry for the link's existence");
 
   // 7. When you change the numbers in the three inputs on the bottom,
